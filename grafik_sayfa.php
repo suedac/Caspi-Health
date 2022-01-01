@@ -1,5 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE.php>
+.php lang="en">
 
 
 <head>
@@ -23,9 +23,9 @@
     <h1 class="h2 col-md-6 my-5 mt-5 text-center">WELCOME!</h1>
     <div class="row">
         <ul class="liste col-md-3">
-            <li><a href="grafik_sayfa.html">Anasayfa</a></li>
-            <li><a href="sorgular.html">Sorgulamalar</a></li>
-            <li><a href="Eleman_Ekle.html">Yeni Eleman Ekle</a></li>
+            <li><a href="grafik_sayfa.php">Anasayfa</a></li>
+            <li><a href="sorgular.php">Sorgulamalar</a></li>
+            <li><a href="Eleman_Ekle.php">Yeni Eleman Ekle</a></li>
         </ul>
         <div class="d-flex justify-content-center col-md-6">
             <div class="row mx-3">
@@ -204,4 +204,4 @@
     }
 </script>
 
-</html>
+<.php>

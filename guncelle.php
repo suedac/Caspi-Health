@@ -1,5 +1,5 @@
-<!DOCTYPE html>
-<html>
+<!DOCTYPE.php>
+.php>
 
 <head>
     <meta charset='utf-8'>
@@ -15,9 +15,9 @@
 <body>
     <div class="row" style="margin-top: 5%;">
         <ul class="liste col-md-3">
-            <li><a href="grafik_sayfa.html">Anasayfa</a></li>
-            <li><a href="sorgular.html">Sorgulamalar</a></li>
-            <li><a href="Eleman_Ekle.html">Yeni Eleman Ekle</a></li>
+            <li><a href="grafik_sayfa.php">Anasayfa</a></li>
+            <li><a href="sorgular.php">Sorgulamalar</a></li>
+            <li><a href="Eleman_Ekle.php">Yeni Eleman Ekle</a></li>
         </ul>
         <div class="text-center col-md-6">
             <h1> <b>Eleman Adi</b> Guncelle</h1>
@@ -137,4 +137,4 @@
 
 </body>
 
-</html>
+<.php>

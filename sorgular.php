@@ -1,5 +1,5 @@
-<!DOCTYPE html>
-<html>
+<!DOCTYPE.php>
+.php>
 
 <head>
     <meta charset='utf-8'>
@@ -14,9 +14,9 @@
 <body>
     <div class="row" style="margin-top: 5%;">
         <ul class="liste col-md-3">
-            <li><a href="grafik_sayfa.html">Anasayfa</a></li>
-            <li><a href="sorgular.html">Sorgulamalar</a></li>
-            <li><a href="Eleman_Ekle.html">Yeni Eleman Ekle</a></li>
+            <li><a href="grafik_sayfa.php">Anasayfa</a></li>
+            <li><a href="sorgular.php">Sorgulamalar</a></li>
+            <li><a href="Eleman_Ekle.php">Yeni Eleman Ekle</a></li>
         </ul>
         <div class="text-center col-md-6">
             <h1> Eleman Bilgileri</h1>
@@ -57,7 +57,7 @@
                             <hr>
                         </div>
                         <div class="col-md-4">
-                            <a href="Hastalik_kayit.html">
+                            <a href="Hastalik_kayit.php">
                                 <h3><b>Hastalik Kaydi</b></h3>
                             </a>
                             <hr>
@@ -77,7 +77,7 @@
                         <div class="col-md-4">
                             <h3><b></b>+/-</b>
                             </h3>
-                            <a href="Covid.html">
+                            <a href="Covid.php">
                                 <p> Covid Durumu</p>
                             </a>
 
@@ -88,7 +88,7 @@
                 <div class="d-flex justify-content-end">
 
                     <div class="guncelle">
-                        <button><b><a href="guncelle.html">Guncelle</a></b></button>
+                        <button><b><a href="guncelle.php">Guncelle</a></b></button>
                     </div>
                     <div class="sil">
                         <button><b>Elemani Sil</b></button>
@@ -99,4 +99,4 @@
     </div>
 </body>
 
-</html>
+<.php>
