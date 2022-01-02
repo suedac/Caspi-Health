@@ -14,7 +14,7 @@ if (!$conn) {
   die("Connection failed: " . mysqli_connect_error());
 }
 echo "Connected successfully";
-$table = "hastalikkaydi";
+$table = "recete";
 
 ?>
 <head>
@@ -30,42 +30,44 @@ $table = "hastalikkaydi";
 <body>
     <div class="row" style="margin-top: 5%;">
         <ul class="liste col-md-3">
-            <li><a href="grafik_sayfa.php">Anasayfa</a></li>
+            <li><a href="index.php">Anasayfa</a></li>
             <li><a href="sorgular.php">Sorgulamalar</a></li>
             <li><a href="Eleman_Ekle.php">Yeni Eleman Ekle</a></li>
         </ul>
         <div class="text-center col-md-6">
-            <h1> <b>Eleman Adi</b> Hastalik Kayitlari</h1>
+            <h1> <b>Eleman Adi</b> recete bilgisi</h1>
         </div>
     </div>
     <div class="d-flex justify-content-center">
         <div class="hastalik">
             <table id="hastalik">
                 <tr>
-                    <th>Hastalik Adi</th>
-                    <th>hastalik adi</th>
-                    <th>semptomlar</th>
-                    <th>Recete</th>
-                    <th>hastalik tarihi</th>
-                    <th>eleman id</th>
+                    <th>idilac</th>
+                    <th>ilac ismi</th>
+                    <th>ilac dozu(mg)</th>
+                    <th>recete id</th>
                 </tr>
-       <?php
+                <?php 
 
 $sql = "SELECT * FROM $table";
 $result = $conn->query($sql);
 if ($result->num_rows > 0) {
     while ($row = $result->fetch_assoc()) {
-        echo "<tr><td>" . $row["idhastalikkaydi"] . "</td><td>" . $row["idhastalik"] . "</td><td>" . $row["idbelirti"] . "</td><td><a href = 'recete.php'>" . $row["idilac"] . "</a></td><td>" . $row["hastaliktarih"] . "</td><td>" . $row["ideleman"] . "</td></tr>";
+        echo "<tr><td>" . $row["idilac"] . "</td><td>" . $row["ilacisim"] . "</td><td>" . $row["ilacdoz"] . "</td><td>" . $row["idrecete"] . "</td></tr>";
     }
     echo "</table>";
 } else {
     echo "0 result";
 }
 
-
 ?>
-
+       
         </div>
     </div>
+
+
+
+
+
 </body>
 

@@ -1,4 +1,18 @@
 <!DOCTYPE.html>
+<?php
+$servername = "localhost";
+$username = "root";
+$password = "";
+
+// Create connection
+$conn = mysqli_connect($servername, $username, $password);
+
+// Check connection
+if (!$conn) {
+  die("Connection failed: " . mysqli_connect_error());
+}
+echo "Connected successfully";
+?>
 
 <head>
     <meta charset='utf-8'>
@@ -14,7 +28,7 @@
 <body>
     <div class="row" style="margin-top: 5%;">
         <ul class="liste col-md-3">
-            <li><a href="grafik_sayfa.php">Anasayfa</a></li>
+            <li><a href="index.php">Anasayfa</a></li>
             <li><a href="sorgular.php">Sorgulamalar</a></li>
             <li><a href="Eleman_Ekle.php">Yeni Eleman Ekle</a></li>
         </ul>
@@ -29,7 +43,7 @@
                     <form action="">
                         <input type="text">
                     </form>
-                    <p>ad soyad</p>
+                    <p>Ad Soyad</p>
                     <hr>
                 </div>
                 <div class="col-md-4">
@@ -72,7 +86,7 @@
                         <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio8" value="option8">
                         <label class="form-check-label" for="inlineRadio3">AB -</label>
                     </div>
-                    <p>kan grubu</p>
+                    <p>Kan Grubu</p>
                     <hr>
                 </div>
             </div>
@@ -107,6 +121,7 @@
                         <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio11" value="option11">
                         <label class="form-check-label" for="inlineRadio3">universite</label>
                     </div>
+                    <p>Egitim</p>
                     <hr>
                 </div>
                 <div class="col-md-4">
@@ -123,7 +138,7 @@
             </div>
             <div></div>
             <div class="d-flex justify-content-end">
-                <button><b><a href="">Guncelle</a></b></button>
+                <button><b><a href="">elemani ekle</a></b></button>
         </div>
     </div>
 
@@ -137,4 +152,3 @@
 
 </body>
 
-<.php>

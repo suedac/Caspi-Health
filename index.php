@@ -1,12 +1,12 @@
 <!DOCTYPE.php>
-.php lang="en">
+
 <?php
 $servername = "localhost";
 $username = "root";
 $password = "";
-
+$dbname = "caspi";
 // Create connection
-$conn = mysqli_connect($servername, $username, $password);
+$conn = mysqli_connect($servername, $username, $password, $dbname);
 
 // Check connection
 if (!$conn) {
@@ -14,17 +14,7 @@ if (!$conn) {
 }
 echo "Connected successfully";
 
-$sql = "select * from eleman"
 
-$result = $conn->query($sql);
-if ($result->num_rows > 0) {
-    // output data of each row
-    while($row = $result->fetch_assoc()) {
-      echo "id: " . $row["ideleman"]. " - Name: " . $row["isim"]. " " . $row["soyisim"]. "<br>";
-    }
-  } else {
-    echo "0 results";
-  }
 
 ?>
 
@@ -49,7 +39,7 @@ if ($result->num_rows > 0) {
     <h1 class="h2 col-md-6 my-5 mt-5 text-center">WELCOME!</h1>
     <div class="row">
         <ul class="liste col-md-3">
-            <li><a href="grafik_sayfa.php">Anasayfa</a></li>
+            <li><a href="index.php">Anasayfa</a></li>
             <li><a href="sorgular.php">Sorgulamalar</a></li>
             <li><a href="Eleman_Ekle.php">Yeni Eleman Ekle</a></li>
         </ul>
@@ -230,4 +220,3 @@ if ($result->num_rows > 0) {
     }
 </script>
 
-<.php>

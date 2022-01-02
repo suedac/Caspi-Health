@@ -1,6 +1,19 @@
 <!DOCTYPE.php>
 .php>
+<?php
+$servername = "localhost";
+$username = "root";
+$password = "";
 
+// Create connection
+$conn = mysqli_connect($servername, $username, $password);
+
+// Check connection
+if (!$conn) {
+  die("Connection failed: " . mysqli_connect_error());
+}
+echo "Connected successfully";
+?>
 <head>
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
@@ -15,7 +28,7 @@
 <body>
     <div class="row" style="margin-top: 5%;">
         <ul class="liste col-md-3">
-            <li><a href="grafik_sayfa.php">Anasayfa</a></li>
+            <li><a href="index.php">Anasayfa</a></li>
             <li><a href="sorgular.php">Sorgulamalar</a></li>
             <li><a href="Eleman_Ekle.php">Yeni Eleman Ekle</a></li>
         </ul>
