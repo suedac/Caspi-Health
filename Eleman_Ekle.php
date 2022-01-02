@@ -13,17 +13,30 @@
     }
     echo "Connected successfully";
 
+    
 
-    if(isset($_GET["tckno"]) && !empty($_GET["tckno"]))
-    {
+   
+    if (isset($_GET["tckno"]) && !empty($_GET["tckno"])) {
         $tcno = $_GET["tckno"];
-        echo $tcno;
-    }
-    else
-    {
+        $ad = $_GET["ad"];
+        $soyad = $_GET["soyad"];
+        $sehir = $_GET["sehir"];
+        $pozisyon = $_GET["pozisyon"];
+        $okul = $_GET["okul"];
+        $kan = $_GET["kanGrubu"];
+        $calSaati = $_GET["calSaati"];
+        $hobiler = $_GET["hobi"];
+        $maas = $_GET["maas"];
+        $sql = "INSERT INTO eleman VALUES(null, '$ad', '$soyad', $maas, '$pozisyon', $tcno, '$hobiler', '$okul', '$kan', '$sehir', '$calSaati');";
+        if ($conn->query($sql) === TRUE) {
+            echo "New record created successfully";
+        } else {
+            echo "Error: " . $sql . "<br>" . $conn->error;
+        }
+    } else {
         $tcno = 1234578907;
     }
-
+    
 
     ?>
 
@@ -68,39 +81,40 @@
                         </div>
                         <div class="col-md-4">
                             <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="kanGrubu" id="inlineRadio1" value="option1">
+                                <input class="form-check-input" type="radio" name="kanGrubu" id="inlineRadio1" value="A+">
                                 <label class="form-check-label" for="inlineRadio1">A +</label>
                             </div>
                             <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="kanGrubu" id="inlineRadio2" value="option2">
+                                <input class="form-check-input" type="radio" name="kanGrubu" id="inlineRadio2" value="A-">
                                 <label class="form-check-label" for="inlineRadio2">A -</label>
                             </div>
                             <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="kanGrubu" id="inlineRadio3" value="option3">
+                                <input class="form-check-input" type="radio" name="kanGrubu" id="inlineRadio3" value="B+">
                                 <label class="form-check-label" for="inlineRadio3">B +</label>
                             </div>
                             <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="kanGrubu" id="inlineRadio4" value="option4">
+                                <input class="form-check-input" type="radio" name="kanGrubu" id="inlineRadio4" value="B-">
                                 <label class="form-check-label" for="inlineRadio1">B -</label>
                             </div>
                             <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="kanGrubu" id="inlineRadio5" value="option5">
+                                <input class="form-check-input" type="radio" name="kanGrubu" id="inlineRadio5" value="0+">
                                 <label class="form-check-label" for="inlineRadio2">0 +</label>
                             </div>
                             <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="kanGrubu" id="inlineRadio6" value="option6">
+                                <input class="form-check-input" type="radio" name="kanGrubu" id="inlineRadio6" value="0-">
                                 <label class="form-check-label" for="inlineRadio3">0 -</label>
                             </div>
                             <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="kanGrubu" id="inlineRadio7" value="option7">
+                                <input class="form-check-input" type="radio" name="kanGrubu" id="inlineRadio7" value="AB+">
                                 <label class="form-check-label" for="inlineRadio3">AB +</label>
                             </div>
                             <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="kanGrubu" id="inlineRadio8" value="option8">
+                                <input class="form-check-input" type="radio" name="kanGrubu" id="inlineRadio8" value="AB-">
                                 <label class="form-check-label" for="inlineRadio3">AB -</label>
                             </div>
                             <p>Kan Grubu</p>
                             <hr>
+                            
                         </div>
                     </div>
                     <div class="row" style="margin: 3%;">
@@ -134,11 +148,23 @@
                             </div>
                             <p>Egitim</p>
                             <hr>
+                            <input type="text" name="hobi">
+                            <p>Hobiler</p>
+                            <hr>
                         </div>
                         <div class="col-md-4">
-                            <input type="text" name="girisSaati">
-                            <input type="text" name="cikisSaati">
-                            <p>Calisma Saatleri</p>
+                        <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="calSaati" id="inlineRadio12" value="haftaici">
+                                <label class="form-check-label" for="inlineRadio12">haftaici</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="calSaati" id="inlineRadio13" value="hergun">
+                                <label class="form-check-label" for="inlineRadio13">hergun</label>
+                            </div>
+                            <p>Calisma Saati</p>
+                            <hr>
+                            <input type="text" name="maas">
+                            <p>Maas</p>
                             <hr>
                         </div>
 
