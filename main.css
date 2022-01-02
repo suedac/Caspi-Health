@@ -198,6 +198,15 @@ body {
     overflow: scroll;
 }
 
+#hastalikbutton {
+    width: 197px;
+    height: 48px;
+    background: #6DF900;
+    border-radius: 4px;
+    border: none;
+    color: white;
+}
+
 #hastalik {
     font-family: Arial, Helvetica, sans-serif;
     border-collapse: collapse;

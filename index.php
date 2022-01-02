@@ -18,7 +18,7 @@
     $covidliLiseli = 0;
     $covidliIlkOkullu = 0;
 
-    $table = "eleman";
+   
     $sql = "SELECT ideleman FROM eleman;";
     $result = $conn->query($sql);
     if ($result->num_rows > 0) {
