@@ -1,6 +1,5 @@
 <!DOCTYPE.html>
     <?php
-
     $servername = "localhost";
     $username = "root";
     $password = "";
@@ -19,12 +18,11 @@
 
     if (isset($_GET["tckno"]) && !empty($_GET["tckno"])) {
         $tcno = $_GET["tckno"];
-        $hastalikadi = $_GET["hastalikadi"];
-        $hastaliktarih = $_GET["hastaliktarih"];
-        $belirti = $_GET["belirti"];
-        $ilac = $_GET["ilac"];
+        $ilacadi = $_GET["ilacadi"];
+        $doz = $_GET["doz"];
 
-        $sql = "INSERT INTO hastalikkaydi VALUES(null, '$belirti', '$hastalikadi', '$ilac' , '$hastaliktarih', null, $tcno);";
+
+        $sql = "INSERT INTO recete VALUES( null, '$ilacadi', $doz , $tcno);";
         if ($conn->query($sql) === TRUE) {
             echo "New record created successfully";
         } else {
@@ -56,48 +54,35 @@
                 <li><a href="Eleman_Ekle.php">Yeni Eleman Ekle</a></li>
             </ul>
             <div class="text-center col-md-6">
-                <h1> <b>Hastalik Ekle</h1>
+                <h1><b>Recete Ekle</b></h1>
             </div>
         </div>
         <div class="d-flex justify-content-center">
             <div class="guncelle1">
-                <form action="yeni_hastalik.php">
+                <form action="recete_ekle.php">
                     <div class="row" style="margin: 3%;">
                         <div class="col-md-4">
-                            <input type="text" name="hastalikadi">
-                            <p>Hastalik Adi</p>
+                            <input type="text" name="ilacadi">
+                            <p> ilac Adi</p>
                             <hr>
                         </div>
                         <div class="col-md-4">
 
+                            <input type="text" name="doz">
+                            <p>ilac Dozu (mg)</p>
+                            <hr>
+                        </div>
+                        <div class="col-md-4">
                             <input type="text" name="tckno">
-                            <p>TC Kimlik No</p>
-                            <hr>
-                        </div>
-                        <div class="col-md-4">
-                            <input type="text" name="hastaliktarih" placeholder="yyyy-mm-dd">
-                            <p>Hastalik Tarihi</p>
+                            <p>Calisan TCNO</p>
 
                             <hr>
                         </div>
                     </div>
-                    <div class="row" style="margin: 3%;">
-                        <div class="col-md-4">
 
-                            <input type="text" name="belirti">
-                            <p>Belirti</p>
-                            <hr>
-                        </div>
-                        <div class="col-md-4">
-                            <input type="input" name="ilac">
-                            <p>Ilac</p>
-                            <hr>
-                        </div>
-
-                    </div>
 
                     <div class="d-flex justify-content-end">
-                        <button type="submit"><b>yeni hastalik ekle</b></button>
+                        <button type="submit"><b>yeni recete ekle</b></button>
                     </div>
                 </form>
             </div>

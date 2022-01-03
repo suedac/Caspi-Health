@@ -5,7 +5,7 @@
     $username = "root";
     $password = "";
     $dbname = "caspi";
-
+    session_start();
     // Create connection
     $conn = mysqli_connect($servername, $username, $password, $dbname);
 
@@ -15,7 +15,7 @@
     }
     echo "Connected successfully";
     $table = "hastalikkaydi";
-
+    $tcno = $_SESSION["tcno"];
     ?>
 
     <head>
@@ -52,7 +52,7 @@
                     </tr>
                     <?php
 
-                    $sql = "SELECT * FROM $table";
+                    $sql = "SELECT * FROM $table where tcno='$tcno'";
                     $result = $conn->query($sql);
                     if ($result->num_rows > 0) {
                         while ($row = $result->fetch_assoc()) {
@@ -67,9 +67,10 @@
                     ?>
                     <div class="d-flex justify-content-end">
                         <form action="yeni_hastalik.php">
-                        <button type="submit" id="hastalikbutton" action="yeni_hastalik.php"><b>Yeni Hastalik Ekle</b></button>
-                </form>
+                            <button type="submit" id="hastalikbutton"><b>Yeni Hastalik Ekle</b></button>
+
                     </div>
+                    </form>
             </div>
         </div>
     </body>

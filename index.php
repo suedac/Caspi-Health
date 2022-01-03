@@ -18,28 +18,25 @@
     $covidliLiseli = 0;
     $covidliIlkOkullu = 0;
 
-   
-    $sql = "SELECT ideleman FROM eleman;";
+
+    $sql = "SELECT * FROM eleman;";
     $result = $conn->query($sql);
     if ($result->num_rows > 0) {
         while ($row = $result->fetch_assoc()) {
-            $id = $row["ideleman"];
-            $sql1 = "select covid from coviddurumu where ideleman = $id;";
+            $tcno = $row["tcno"];
+            $sql1 = "select covid from coviddurumu where tcno = $tcno;";
             $result1 = $conn->query($sql1);
             if ($result1->num_rows > 0) {
                 $result2 = $result1->fetch_assoc();
                 if ($result2["covid"] == '1') {
-                    $sql2 = "select idegitim from eleman where ideleman = $id;"  ;  
+                    $sql2 = "select idegitim from eleman where tcno = $tcno;";
                     $result3 = $conn->query($sql2);
                     $result4 = $result3->fetch_assoc();
-                    if($result4["idegitim"] == "universite"){
+                    if ($result4["idegitim"] == "universite") {
                         $covidliUnili++;
-                    }
-                    elseif($result4["idegitim"] == "lise")
-                    {
+                    } elseif ($result4["idegitim"] == "lise") {
                         $covidliLiseli++;
-                    }
-                    else{
+                    } else {
                         $covidliIlkOkullu++;
                     }
                 }
@@ -206,7 +203,6 @@
                 </ul>
             </div>
         </div>
-
 
     </body>
     <script>
