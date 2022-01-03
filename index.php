@@ -46,13 +46,14 @@
     }
 
 
-	//Top 3 hastalik kodlari
-    $top3sql = "SELECT idhastalik, count(*) FROM hastalikkaydi WHERE idhastalik IS NOT NULL GROUP BY idhastalik ORDER BY count(*) DESC LIMIT 3"
-	    $top3result = $conn->query($top3sql);
-            if ($top3result->num_rows > 0) {
-                $hastalik = $top3result->fetch_assoc();
-		echo $hastalik["idhastalik"];
-            }
+    //Top 3 hastalik kodlari
+    $top3sql = "SELECT idhastalik, count(*) FROM hastalikkaydi WHERE idhastalik IS NOT NULL GROUP BY idhastalik ORDER BY count(*) DESC LIMIT 3;";
+    $top3result = $conn->query($top3sql);
+    if ($top3result->num_rows > 0) {
+        while($hastalik = $top3result->fetch_assoc()){
+        echo $hastalik["idhastalik"];
+        }
+    }
 
     ?>
 
