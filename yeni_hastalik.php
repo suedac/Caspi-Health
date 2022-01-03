@@ -99,6 +99,7 @@
                     <div class="d-flex justify-content-end">
                         <button type="submit"><b>yeni hastalik ekle</b></button>
                     </div>
+
                 </form>
             </div>
 

@@ -68,9 +68,14 @@
                     <div class="d-flex justify-content-end">
                         <form action="yeni_hastalik.php">
                             <button type="submit" id="hastalikbutton"><b>Yeni Hastalik Ekle</b></button>
-
                     </div>
                     </form>
+                    <form action="hastaliksil.php">
+                        <div class="d-flex justify-content-end">
+                            <button type="submit"><b>Hastaligi Sil</b></button>
+                        </div>
+                    </form>
+
             </div>
         </div>
     </body>
