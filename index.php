@@ -81,6 +81,7 @@
                 <li><a href="index.php">Anasayfa</a></li>
                 <li><a href="sorgular.php">Sorgulamalar</a></li>
                 <li><a href="Eleman_Ekle.php">Yeni Eleman Ekle</a></li>
+                <li><a href="eleman_bilgi.php">Eleman Bilgileri</a></li>
             </ul>
             <div class="d-flex justify-content-center col-md-6">
                 <div class="row mx-3">

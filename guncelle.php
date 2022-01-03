@@ -15,8 +15,7 @@
     }
     echo "Connected successfully";
 
-    if(isset($_GET["tckno"]) && !empty($_GET["tckno"]))
-    {
+    if (isset($_GET["tckno"]) && !empty($_GET["tckno"])) {
         $tcno = $_GET["tckno"];
         $ad = $_GET["ad"];
         $soyad = $_GET["soyad"];
@@ -30,17 +29,15 @@
         $sql = "UPDATE eleman SET isim = '$ad', soyisim = '$soyad', maas = '$maas', idsehir = '$sehir', pozisyon = '$pozisyon', idegitim = '$okul', idkangrubu = '$kan', calismasaati = '$calSaati', hobiler = '$hobiler' where tcno = $tcno;";
         if ($conn->query($sql) === TRUE) {
             echo "New record created successfully";
-          } else {
+        } else {
             echo "Error: " . $sql . "<br>" . $conn->error;
-          }
-    }
-    else
-    {
+        }
+    } else {
         $tcno = 1234578907;
     }
 
 
-   
+
 
     ?>
 
@@ -61,6 +58,7 @@
                 <li><a href="index.php">Anasayfa</a></li>
                 <li><a href="sorgular.php">Sorgulamalar</a></li>
                 <li><a href="Eleman_Ekle.php">Yeni Eleman Ekle</a></li>
+                <li><a href="eleman_bilgi.php">Eleman Bilgileri</a></li>
             </ul>
             <div class="text-center col-md-6">
                 <h1> <b>Eleman Adi</b> Guncelle</h1>
@@ -157,7 +155,7 @@
                             <hr>
                         </div>
                         <div class="col-md-4">
-                        <div class="form-check form-check-inline">
+                            <div class="form-check form-check-inline">
                                 <input class="form-check-input" type="radio" name="calSaati" id="inlineRadio12" value="haftaici">
                                 <label class="form-check-label" for="inlineRadio12">haftaici</label>
                             </div>
@@ -173,7 +171,7 @@
                         </div>
 
                     </div>
-                    
+
                     <div class="d-flex justify-content-end">
                         <button type="submit"><b>Guncelle</b></button>
                     </div>

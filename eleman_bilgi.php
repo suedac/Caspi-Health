@@ -66,7 +66,7 @@
                 <li><a href="eleman_bilgi.php">Eleman Bilgileri</a></li>
             </ul>
             <div class="text-center col-md-6">
-                <h1> Sorgular</h1>
+                <h1> Eleman Bilgileri</h1>
             </div>
         </div>
         <div class="d-flex justify-content-center">

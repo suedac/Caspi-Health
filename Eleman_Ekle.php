@@ -13,9 +13,9 @@
     }
     echo "Connected successfully";
 
-    
 
-   
+
+
     if (isset($_GET["tckno"]) && !empty($_GET["tckno"])) {
         $tcno = $_GET["tckno"];
         $ad = $_GET["ad"];
@@ -36,7 +36,7 @@
     } else {
         $tcno = 1234578907;
     }
-    
+
 
     ?>
 
@@ -57,6 +57,7 @@
                 <li><a href="index.php">Anasayfa</a></li>
                 <li><a href="sorgular.php">Sorgulamalar</a></li>
                 <li><a href="Eleman_Ekle.php">Yeni Eleman Ekle</a></li>
+                <li><a href="eleman_bilgi.php">Eleman Bilgileri</a></li>
             </ul>
             <div class="text-center col-md-6">
                 <h1> <b>Eleman Ekle</h1>
@@ -114,7 +115,7 @@
                             </div>
                             <p>Kan Grubu</p>
                             <hr>
-                            
+
                         </div>
                     </div>
                     <div class="row" style="margin: 3%;">
@@ -126,7 +127,7 @@
                             <hr>
                         </div>
                         <div class="col-md-4">
-                            <input type="input" name="pozisyon" >
+                            <input type="input" name="pozisyon">
                             <p>Pozisyon</p>
                             <hr>
                         </div>
@@ -153,7 +154,7 @@
                             <hr>
                         </div>
                         <div class="col-md-4">
-                        <div class="form-check form-check-inline">
+                            <div class="form-check form-check-inline">
                                 <input class="form-check-input" type="radio" name="calSaati" id="inlineRadio12" value="haftaici">
                                 <label class="form-check-label" for="inlineRadio12">haftaici</label>
                             </div>
