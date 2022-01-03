@@ -14,11 +14,10 @@
     }
     echo "Connected successfully";
 
+    //Pie Chart kodlari
     $covidliUnili = 0;
     $covidliLiseli = 0;
     $covidliIlkOkullu = 0;
-
-
     $sql = "SELECT * FROM eleman;";
     $result = $conn->query($sql);
     if ($result->num_rows > 0) {
@@ -45,6 +44,16 @@
     } else {
         echo "0 result";
     }
+
+
+	//Top 3 hastalik kodlari
+    $top3sql = "SELECT idhastalik, count(*) FROM hastalikkaydi WHERE idhastalik IS NOT NULL GROUP BY idhastalik ORDER BY count(*) DESC LIMIT 3"
+	    $top3result = $conn->query($top3sql);
+            if ($top3result->num_rows > 0) {
+                $hastalik = $top3result->fetch_assoc();
+		echo $hastalik["idhastalik"];
+            }
+
     ?>
 
     <head>
