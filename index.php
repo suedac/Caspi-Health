@@ -50,8 +50,14 @@
     $top3sql = "SELECT idhastalik, count(*) FROM hastalikkaydi WHERE idhastalik IS NOT NULL GROUP BY idhastalik ORDER BY count(*) DESC LIMIT 3;";
     $top3result = $conn->query($top3sql);
     if ($top3result->num_rows > 0) {
-        while($hastalik = $top3result->fetch_assoc()){
-        echo $hastalik["idhastalik"];
+        $i = 0;
+        $top3hastalik = array(3);
+        $top3hastalikCounts = array(3);
+        while ($hastalik = $top3result->fetch_assoc()) {
+            $top3hastalik[$i] = $hastalik["idhastalik"];
+            $top3hastalikCounts[$i] = $hastalik["count(*)"];
+
+            $i++;
         }
     }
 
@@ -81,7 +87,6 @@
                 <li><a href="index.php">Anasayfa</a></li>
                 <li><a href="sorgular.php">Sorgulamalar</a></li>
                 <li><a href="Eleman_Ekle.php">Yeni Eleman Ekle</a></li>
-                <li><a href="eleman_bilgi.php">Eleman Bilgileri</a></li>
             </ul>
             <div class="d-flex justify-content-center col-md-6">
                 <div class="row mx-3">
@@ -234,24 +239,16 @@
         Morris.Bar({
             element: 'bar-example',
             data: [{ //dinamic alinacak
-                y: 'Covid',
-                a: 100,
+                y: '<?php echo $top3hastalik[0] ?>',
+                a: <?php echo $top3hastalikCounts[0] ?>,
 
             }, {
-                y: 'Depresyon',
-                b: 75,
+                y: '<?php echo $top3hastalik[1] ?>',
+                b: <?php echo $top3hastalikCounts[1] ?>,
 
             }, {
-                y: 'Grip',
-                c: 50,
-
-            }, {
-                y: 'Kanser',
-                d: 75,
-
-            }, {
-                y: 'Kabakulak',
-                e: 50,
+                y: '<?php echo $top3hastalik[2] ?>',
+                c: <?php echo $top3hastalikCounts[2] ?>,
 
             }],
             xkey: 'y',

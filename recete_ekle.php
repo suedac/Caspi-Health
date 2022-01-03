@@ -52,7 +52,6 @@
                 <li><a href="index.php">Anasayfa</a></li>
                 <li><a href="sorgular.php">Sorgulamalar</a></li>
                 <li><a href="Eleman_Ekle.php">Yeni Eleman Ekle</a></li>
-                <li><a href="eleman_bilgi.php">Eleman Bilgileri</a></li>
             </ul>
             <div class="text-center col-md-6">
                 <h1><b>Recete Ekle</b></h1>
